@@ -17,7 +17,7 @@ import fs from 'fs'
                 resource_type :"auto"
             })
             // file has been uploades successfully
-            console.log("file has been uploaded sussessfully",response.url)
+            // console.log("file has been uploaded sussessfully",response.url)
             return response ;
         } catch (error)  {
                 fs.unlinkSync(localFilePath) // remove the 
