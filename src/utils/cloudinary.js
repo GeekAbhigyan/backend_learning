@@ -17,7 +17,8 @@ import fs from 'fs'
                 resource_type :"auto"
             })
             // file has been uploades successfully
-            console.log("file has been uploaded sussessfully",response.url)
+            // console.log("file has been uploaded sussessfully",response.url)
+            fs.unlinkSync(localFilePath)
             return response ;
         } catch (error)  {
                 fs.unlinkSync(localFilePath) // remove the 
@@ -25,8 +26,6 @@ import fs from 'fs'
                 //operation got failed
 
                 return null;
-
-            console.log(error);
         }
  }
 
