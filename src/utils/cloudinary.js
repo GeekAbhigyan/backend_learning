@@ -17,19 +17,17 @@ import fs from 'fs'
                 resource_type :"auto"
             })
             // file has been uploades successfully
-            // console.log("file has been uploaded sussessfully",response.url)
+            console.log("file has been uploaded sussessfully",response.url)
             return response ;
         } catch (error)  {
                 fs.unlinkSync(localFilePath) // remove the 
                 //locally saved temporary filr as the upload 
                 //operation got failed
 
-                return null
+                return null;
 
             console.log(error);
         }
-
-
  }
 
 export {uploadOnCloudinary}

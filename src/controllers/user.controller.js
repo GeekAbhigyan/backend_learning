@@ -1,9 +1,16 @@
 import { asyncHandler } from "../utils/asyncHandler.js";
-
+import { apiError } from "../utils/apiError.js";
 
 
 const registerUser = asyncHandler( async(req , res)=>{
-   //get user details from frontend
+//   res.status(200).json({
+//     message: "okk"
+//   })
+  
+  
+  
+  
+    //get user details from frontend
    //validation -> not empty
    //check if user already exist , email
    //check for images 
@@ -15,7 +22,9 @@ const registerUser = asyncHandler( async(req , res)=>{
    // return res
 
    const {fullName,email,username,password} = req.body
-    console.log("email",email)
+    console.log("email",email);
+
+    if()
 
 
 })
